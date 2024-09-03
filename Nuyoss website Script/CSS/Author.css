@@ -1,0 +1,123 @@
+body{
+	background-color: #F8F8FF;
+	margin: 0px;
+}
+.bannar{
+	width: 100%;
+	float: left;
+	align-items: center;
+}
+.row{
+	width: 100%;
+	float: left;
+	background: #fff;
+}
+.logo{
+	width: 500px;
+	height: 70px;
+	text-align: center;
+	background: none;
+}
+.logo img{
+	width: 70px;
+	float: left;
+}
+.title{
+	width: 8%;
+	height: 21.9px;
+	float: left;
+	background: #32CD32;
+	color: white;
+	padding: 5px 0.5% 5px 0.5%;
+}
+.title >i{
+	font-size: 17.9px;
+}
+.Latest_update{
+	width: 90%;
+	float: left;
+	background: #99CCFF;
+	padding: 5px 0.5% 5px 0.5%;
+}
+span a{
+	color: green;
+	text-decoration: none;
+}
+span a:hover{
+	color: blue;
+}
+nav{
+	background:#808080;
+	color: #FFFFFF;
+	padding-bottom: 1px;
+	padding-top: 1px;
+}
+nav ul li{
+	display: inline;
+	margin-right: 6.5%;
+}
+nav ul li a{
+	color: white;
+	text-decoration: none;
+	background-color: none;
+	padding: 2px 3px;
+	border-radius: 8px;
+}
+nav ul li a:hover{
+	color: blue;
+	text-decoration: underline;
+}
+h1{
+	width: 100%;
+	color: green;
+	float: left;
+	text-align: center;
+	text-decoration: none;
+	text-transform: none;
+	font-family: Times New Roman (Headins CS);
+}
+.content{
+	width: 100%;
+	float: left;
+	height: auto;
+	text-align: left;
+	color: green;
+	font-family: Arial;
+	background: ghostwhite;
+}
+.row-1{
+	background-color: whitesmoke;
+}
+footer{
+	width: ‭100%;
+	background: whitesmoke;
+	float: left;
+}
+.col-third{
+	width: 29.33333333333333%;
+	float: left;
+	color: grey;
+	text-align: left;
+	margin-left: -2%;
+	padding: 1px 5px 5px 74px;
+	font-family: Arial;
+	text-transform: justify;
+}
+.col-third ul li a{
+	text-transform: inherit;
+	text-decoration: none;
+	color: grey;
+}
+.col-third ul li a:hover{
+	color: blue;
+	text-decoration: underline;
+}
+.copy-right{
+	width: 100%;
+	float: left;
+	color: white;
+	text-align: center;
+	font-family: Arial;
+	background-color: black;
+	margin: 0px;
+}
