@@ -1,0 +1,227 @@
+<?php
+	session_start();
+	if($_SESSION['admin']==null){
+	 	header('location:./logout.php');
+	}
+?>
+<?php
+$connection= mysqli_connect("localhost","root","","nuyoss_database");
+
+?>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>View Voted</title>
+	<link rel="icon" type="image/ico" href="./image/logo.png" />
+	<link rel="stylesheet" type="text/css" href="./css/dashboard.css">
+	<link rel="stylesheet" href="font-awesome-4.7.0\css\font-awesome.min.css">
+</head>
+<body>
+	<div id="container">
+		<div class="row">
+			<div class="logo">
+				<span class="head"><b>National Union Of Yobe State Students.<br>(NUYOSS)</b></span>
+			</div>
+		</div>
+		<div class="row">
+			<nav>
+			<ul>
+				<li><a href="./index.php"><i class="fa fa-dashboard" aria-hidden="true"></i> Dashboard</a></li>
+				<li><a href="./admin_profile.php"><i class="fa fa-user-circle-o" aria-hidden="true"></i> My Profile</a></li>
+				<li><a href="./users.php"><i class="fa fa-users" aria-hidden="true"></i> Users</a></li>
+				<li><a href="./Voted.php"><i class="fa fa-check-square-o" aria-hidden="true"></i> View Voted</a></li>
+				<li><a href="./logout.php"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a></li>
+			</ul>
+			</nav>
+		</div>
+			<div class="content">
+				<?php
+					echo "<h1><center> Voted List</center></h1> <span style='display:none;'> ".$_SESSION['admin']."</span>";
+				?>
+				<hr>
+			</div>
+			<div class="full-col">
+				<div class="col-last">
+				<div class="users">
+					<?php
+						$query="select * from deligate ORDER BY ID_No";
+
+							$result=mysqli_query($connection, $query);
+								$result=mysqli_query($connection, $query);
+								
+									$Voters=mysqli_num_rows($result);
+					?>
+					<span class="stu"><b>Total Voters (<?php echo $Voters;?>)</b></span><br>
+					<!--<span class="stu"><b><?php echo $ID_No;?></b></span>-->
+				</div>
+
+				<div class="list-users">
+					<marquee direction="up" scrollamount="5" behavior="scroll">
+					<?php
+									$query="select * from deligate";
+
+									$result=mysqli_query($connection, $query);
+									if ($result) {
+										if(mysqli_num_rows($result) >0){
+											while($row=mysqli_fetch_assoc($result)){
+												$Name=$row['Name'];
+												$Email_Add=$row['Email_Add'];
+												$Matric_No=$row['Matric_No'];
+												$Deligate_id=$row['Deligate_id'];
+							?>
+					<hr><b><center><span class="usr" style="color: black;"><?php echo $Name;?></span><br><span class="usrs" style="color: blue;"> <?php echo $Deligate_id;?></span></center></b><hr>
+					<?php
+									}
+										}
+									}else{
+										echo mysqli_error($connection);
+									}
+							?>
+					</marquee>
+				</div>
+				</div>
+				<center><input class="int" type="search" name="search" placeholder="Search: Position Here" ></center><br><br>
+				<a href="./Voted_Candidate/Voted%20list.php" target="black">
+				<div class="col-half">
+					<div class="vote-container">
+						<label class="link"style="color: red;"><strong>President</strong></label>
+					</div>
+				</div></a>
+				<a href="#">
+				<div class="col-half">
+					<div class="vote-container">
+						<label class="link" style="color: red;"><strong>Vice President (1)</strong></label>
+					</div>
+				</div></a>
+				<a href="#">
+				<div class="col-half">
+					<div class="vote-container">
+						<label class="link" style="color: red;"><strong>Vice President (2)</strong></label>
+					</div>
+				</div></a>
+				<a href="#">
+				<div class="col-half">
+					<div class="vote-container">
+						<label class="link" style="color: red;"><strong>Secretary General</strong></label>
+					</div>
+				</div></a>
+				<a href="#">
+				<div class="col-half">
+					<div class="vote-container">
+						<label class="link" style="color: red;"><strong>Assistant Secretary General</strong></label>
+					</div>
+				</div></a>
+				<a href="#">
+				<div class="col-half">
+					<div class="vote-container">
+						<label class="link" style="color: red;"><strong>Financial Secretary</strong></label>
+					</div>
+				</div></a>
+				<a href="#">
+				<div class="col-half">
+					<div class="vote-container">
+						<label class="link" style="color: red;"><strong>Treasurer</strong></label>
+					</div>
+				</div></a>
+				<a href="#">
+				<div class="col-half">
+					<div class="vote-container">
+						<label class="link" style="color: red;"><strong>Auditor (1)</strong></label>
+					</div>
+				</div></a>
+				<a href="#">
+				<div class="col-half">
+					<div class="vote-container">
+						<label class="link" style="color: red;"><strong>Auditor (2)</strong></label>
+					</div>
+				</div></a>
+				<a href="#">
+				<div class="col-half">
+					<div class="vote-container">
+						<label class="link" style="color: red;"><strong>Auditor (3)</strong></label>
+					</div>
+				</div></a>
+				<a href="#">
+				<div class="col-half">
+					<div class="vote-container">
+						<label class="link" style="color: red;"><strong>Welfare Director (1)</strong></label>
+					</div>
+				</div></a>
+				<a href="#">
+				<div class="col-half">
+					<div class="vote-container">
+						<label class="link" style="color: red;"><strong>Welfare Director (2)</strong></label>
+					</div>
+				</div></a>
+				<a href="#">
+				<div class="col-half">
+					<div class="vote-container">
+						<label class="link" style="color: red;"><strong>Admin. Secretary</strong></label>
+					</div>
+				</div></a>
+				<a href="#">
+				<div class="col-half">
+					<div class="vote-container">
+						<label class="link" style="color: red;"><strong>Social Director</strong></label>
+					</div>
+				</div></a>
+				<a href="#">
+				<div class="col-half">
+					<div class="vote-container">
+						<label class="link" style="color: red;"><strong>Sport Director</strong></label>
+					</div>
+				</div></a>
+				<a href="#">
+				<div class="col-half">
+					<div class="vote-container">
+						<label class="link" style="color: red;"><strong>PRO (1)</strong></label>
+					</div>
+				</div></a>
+				<a href="#">
+				<div class="col-half">
+					<div class="vote-container">
+						<label class="link" style="color: red;"><strong>PRO (2)</strong></label>
+					</div>
+				</div></a>
+				<a href="#">
+				<div class="col-half">
+					<div class="vote-container">
+						<label class="link" style="color: red;"><strong>Speaker</strong></label>
+					</div>
+				</div></a>
+				<a href="#">
+				<div class="col-half">
+					<div class="vote-container">
+						<label class="link" style="color: red;"><strong>Deputy Speaker</strong></label>
+					</div>
+				</div></a>
+				<a href="#">
+				<div class="col-half">
+					<div class="vote-container">
+						<label class="link" style="color: red;"><strong>Cleark</strong></label>
+					</div>
+				</div></a>
+				<a href="#">
+				<div class="col-half">
+					<div class="vote-container">
+						<label class="link" style="color: red;"><strong>Deputy Cleark</strong></label>
+					</div>
+				</div></a>
+				<a href="#">
+				<div class="col-half">
+					<div class="vote-container">
+						<label class="link" style="color: red;"><strong>Chief Whip</strong></label>
+					</div>
+				</div></a>
+				<a href="#">
+				<div class="col-half">
+					<div class="vote-container">
+						<label class="link" style="color: red;"><strong>Deputy Chief Whip</strong></label>
+					</div>
+				</div></a>
+				</div>
+			</div>
+			</div>
+	</div><!-- end of Container-->
+</body>
+</html>
