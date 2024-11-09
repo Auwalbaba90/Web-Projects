@@ -1,0 +1,154 @@
+/*========================================Result Slip CSS======================================*/
+.content {
+	margin: 0%;
+  /*background-image: url(../images/About_school.jpg);*/
+  border-style: solid;
+  border-width: 5px;
+  border-color: #009933;
+  width: 95%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  margin-left: 2.5%;
+  float: left;
+
+}
+.logo {
+	width: 14%;
+	float: left;
+	margin-top: 1%;
+	margin-left: 1%;
+}
+.sname {
+  color: green;
+  font-family: Swis721 Hv BT;
+}
+.s-name {
+	color: red;
+	font-family: Swis721 Hv BT;
+}
+.program {
+	background-color: #009900;
+	font-family: Swis721 Hv BT;
+	color: #ffffff;
+	font-size: 20px;
+	border-radius: 5px;
+	max-width: 20%;
+	margin-bottom: 1%;
+}
+.p-infor {
+	width: 45%;
+	float: left;
+	text-align: left;
+	border-style: solid;
+	border-width: 2px;
+  border-color: #009933;
+
+}
+.other-infor {
+	width: 45%;
+	float: left;
+	text-align: left;
+	border-style: solid;
+	border-width: 2px;
+  border-color: #009933;
+  margin-left: 4.5%;
+}
+.infor {
+	margin-left: 5%;
+}
+.Assessement {
+	color: #ff0000;
+	
+}
+.term {
+	color: #009900;
+	font-size: 30%;
+	font-family: Swis721 Hv BT;
+}
+.dts {
+	color: #ff0000;
+}
+.infor-table {
+	min-width: 100%;
+}
+.infor-table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  color: #009900;
+  border-color: #009900;
+}
+.sheet {
+	min-width: 100%;
+	
+	
+}
+.r-sheet {
+	min-width: 90%;
+	border: 3px solid black;
+	border-color: #009900;
+}
+.thedc {
+	text-align: center;
+	font-size: 20px;
+	font-family: Swis721 Hv BT;
+	background-color: #009900;
+	color: #ffffff;
+}
+.thed {
+	text-align: center;
+	font-family: Swis721 Hv BT;
+	font-size: 18px;
+}
+.tdat {
+	text-align: center;
+	color: #ff0000;
+}
+.cours {
+	text-align: left;
+	font-family: Swis721 Hv BT;
+	font-size: 18px;
+}
+.Total {
+	width: 90%;
+	margin-bottom: 1%;
+	margin-bottom: 55%;
+}
+.down {
+	float: left;
+	min-width: 68%;
+}
+.down-right {
+	border: 3px solid black;
+	color: #009900;
+  	border-color: #ff0000;
+	float: left;
+	min-width: 30%;
+	margin-left: 2%;
+}
+.cols {
+	border-color: #ff0000;
+}
+.tbd {
+	color: #ff0000;
+}
+.cols-2 {
+	border-color: #ff0000;
+	text-align: center;
+	font-size: 20px;
+	font-family: Swis721 Hv BT;
+	background-color: #ff0000;
+	color: #ffffff;
+}
+/* ================================== phone Size ==============================================*/
+ @media screen and (max-width: 940px) {
+    .content {
+	margin: 1%;
+  border-style: solid;
+  border-width: 5px;
+  border-color: #009933;
+  width: 300%;
+  margin-left: 2.5%;
+  float: left;
+
+}
+  }
